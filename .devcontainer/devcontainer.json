@@ -33,7 +33,8 @@
 	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "yarn install",
+	// installing starship propmt
+	"postCreateCommand": "curl -sS https://starship.rs/install.sh | sh && echo 'eval \"$(starship init bash)\"' >> ~/.bashrc && source ~/.bashrc",
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	//"remoteUser": "core"
