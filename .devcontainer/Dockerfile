@@ -7,6 +7,9 @@ RUN apt-get update && apt-get install -y \
     bash \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Starship
+RUN curl -fsSL https://starship.rs/install.sh | bash -s -- --yes
+
 # Copy the fzf installation script into the container
 COPY install-fzf.sh /tmp/install-fzf.sh
 
